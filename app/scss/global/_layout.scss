@@ -1,0 +1,43 @@
+@use "../utilities/" as *;
+
+// Spacing
+.container {
+  width: 100%;
+  max-width: 77rem;
+  margin: 0 auto;
+  padding-inline: 1.25rem;
+
+  @include breakpoint-up(xlarge) {
+    padding-inline: 0;
+  }
+}
+
+// Flexbox
+.flex {
+  display: flex;
+}
+
+.flex-ai-c {
+  align-items: center;
+}
+
+.flex-jc-c {
+  justify-content: center;
+}
+
+.flex-jc-sb {
+  justify-content: space-between;
+}
+
+// Visibility
+.hide-for-mobile {
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}

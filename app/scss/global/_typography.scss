@@ -1,0 +1,47 @@
+h1,
+h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+}
+
+p {
+  line-height: 1.75;
+}
+
+a {
+  text-decoration: none;
+  color: var(--charcoal-gray);
+  transition: color 200ms ease-in-out;
+
+  &:hover {
+    color: var(--dark-olive-green);
+  }
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--white);
+  text-transform: uppercase;
+  padding: 1rem 1.75rem;
+  border-radius: 0.625rem;
+  background: linear-gradient(var(--olive-green) 50%, var(--dark-olive-green));
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    background: rgba(255, 255, 255, 0.25);
+    transition: opacity 200ms ease-in-out;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,44 @@
+@use "../utilities/" as *;
+
+.footer {
+  margin-block-start: 6.25rem;
+  padding-block: 3.25rem;
+  text-align: center;
+  background: var(--cream);
+
+  @include breakpoint-up(large) {
+    margin-block-start: 8rem;
+  }
+
+  a {
+    &:not(:last-child) {
+      margin-inline-end: 1rem;
+
+      @include breakpoint-up(medium) {
+        margin-inline-end: 1.75rem;
+      }
+    }
+  }
+
+  &__socials {
+    a {
+      svg {
+        width: 1.5rem;
+        height: 1.5rem;
+
+        path {
+          fill: var(--olive-green);
+          transition: fill 200ms ease-in-out;
+        }
+
+        &:hover path {
+          fill: var(--dark-olive-green);
+        }
+      }
+    }
+  }
+
+  &__links {
+    margin-block: 1.5rem 1.25rem;
+  }
+}
