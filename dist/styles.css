@@ -47,7 +47,7 @@ a {
   color: var(--charcoal-gray);
   transition: color 200ms ease-in-out;
 }
-a:hover {
+a:not(.button):hover {
   color: var(--dark-olive-green);
 }
 
